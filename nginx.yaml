@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: nginx-svc
   namespace: test-deployment
-  namespace: default
   labels:
     app: nginx-test
 spec:
