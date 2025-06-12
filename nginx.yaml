@@ -34,7 +34,7 @@ spec:
         app: nginx-test
     spec:
       containers:
-      - image: acrpramautodeploy.azurecr.io/nginx
+      - image: pramfleetacr.azurecr.io/nginx
         imagePullPolicy: Always
         name: nginx
         ports:
