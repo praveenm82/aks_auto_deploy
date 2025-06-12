@@ -4,12 +4,7 @@ metadata:
   name: nginx-crp
 spec:
   policy:
-    numberOfClusters: 2
-    placementType: PickN
-    topologySpreadConstraints:
-    - maxSkew: 1
-      topologyKey: region
-      whenUnsatisfiable: DoNotSchedule
+    placementType: PickAll
   resourceSelectors:
   - group: ""
     kind: Namespace
