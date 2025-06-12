@@ -1,0 +1,27 @@
+apiVersion: placement.kubernetes-fleet.io/v1
+kind: ClusterResourcePlacement
+metadata:
+  creationTimestamp: "2025-06-12T01:37:27Z"
+  finalizers:
+  - kubernetes-fleet.io/crp-cleanup
+  - kubernetes-fleet.io/scheduler-cleanup
+  generation: 2
+  name: nginx-crp
+  resourceVersion: "52358"
+  uid: 59ec236e-3037-4b65-abe3-41d0240a5abf
+spec:
+  policy:
+    numberOfClusters: 2
+    placementType: PickN
+    topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: region
+      whenUnsatisfiable: DoNotSchedule
+  resourceSelectors:
+  - group: ""
+    kind: Namespace
+    name: nginx-deployment
+    version: v1
+  revisionHistoryLimit: 10
+  strategy:
+    type: RollingUpdate
