@@ -45,8 +45,8 @@ env:
   CLUSTER_RESOURCE_GROUP: rg-pram-fleet
   CLUSTER_RESOURCE_TYPE: Microsoft.ContainerService/fleets
   DEPLOYMENT_MANIFEST_PATH: |
-    ./nginx.yaml
-    ./nginx-crp.yaml
+    ./nginx.yaml |
+    ./ngnix-crp.yaml
   DOCKER_FILE: ./Dockerfile
   BUILD_CONTEXT_PATH: ./
   NAMESPACE: nginx-deployment
